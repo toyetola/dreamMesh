@@ -83,7 +83,7 @@ class talkController extends Controller
     public  function getTalks1(){
         try{
             $talks = talk::all();
-            return response()->json(['talks'=>$talks]);
+            return response()->json(['talks'=>$talks], 200);
         }catch(\Exception $e){
             return response()->json(['errors'=>'Error'], 204);
         }
